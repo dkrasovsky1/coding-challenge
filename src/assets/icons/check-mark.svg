@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 20">
+  <mask
+    id="mask0_76_19"
+    width="27"
+    height="20"
+    x="0"
+    y="0"
+    maskUnits="userSpaceOnUse"
+    style="mask-type: luminance"
+  >
+    <path
+      fill="#fff"
+      fill-rule="evenodd"
+      d="m0 10 3.333-3.333L10 13.333 23.333 0l3.334 3.333L10 20 0 10Z"
+      clip-rule="evenodd"
+    />
+  </mask>
+  <g mask="url(#mask0_76_19)">
+    <path fill="#fff" d="M-2.667-6h32v32h-32V-6Z" />
+  </g>
+</svg>

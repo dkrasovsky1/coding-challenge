@@ -1,4 +1,7 @@
+@import './typography';
+
 html {
+  @extend %body;
   line-height: 1.15;
   text-size-adjust: 100%;
 }

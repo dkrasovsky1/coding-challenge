@@ -1,0 +1,25 @@
+.list {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.top-down {
+  margin-top: 10px;
+  min-width: 260px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  transform: translateY(-10%);
+  transition: all 0.35s ease-in-out;
+  z-index: 10;
+
+  &.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0%);
+  }
+}
