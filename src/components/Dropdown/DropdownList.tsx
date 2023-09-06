@@ -36,6 +36,7 @@ export const DropdownList: React.FC<DropdownListProps> = ({
           [styles.close]: !isOpen,
         },
       )}
+      aria-expanded={isOpen ? 'true' : 'false'}
     >
       <ul className={styles.list}>
         {Children.map(children, (child) =>

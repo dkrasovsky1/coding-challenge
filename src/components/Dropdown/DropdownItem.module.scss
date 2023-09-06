@@ -2,8 +2,28 @@
 
 .root {
   position: relative;
+  color: #f9f9fb;
 }
 
 .item {
-  color: #f9f9fb;
+  color: inherit;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 38px;
+  width: 100%;
+  background-color: transparent;
+  border-width: 0;
+  text-transform: inherit;
+  color: inherit;
+  padding: 0 15px;
+  gap: 10px;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
 }

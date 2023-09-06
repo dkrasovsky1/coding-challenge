@@ -13,7 +13,6 @@ interface DropdownToggleProps
 }
 
 export const DropdownToggle = ({
-  style,
   children,
   ...restProps
 }: DropdownToggleProps) => {
@@ -33,7 +32,6 @@ export const DropdownToggle = ({
 
   return (
     <Button
-      style={{ ...style, cursor: 'pointer' }}
       onKeyDown={handleClick}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}

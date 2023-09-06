@@ -27,7 +27,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "@types/images.d.ts"
+    "@types/styles.d.ts",
+    "@types/media.d.ts"
   ],
   "exclude": ["node_modules"]
 }

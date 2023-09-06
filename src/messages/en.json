@@ -1,5 +1,9 @@
 {
-  "Index": {
-    "title": "Hello world!"
+  "Navigation": {
+    "docs": "Documentation",
+    "more": "More"
+  },
+  "LangSwitcher": {
+    "locale": "{locale, select, uk {Ukrainian} en {English} other {Unknown}}"
   }
 }

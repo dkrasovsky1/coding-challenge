@@ -1,0 +1,11 @@
+.root {
+  display: flex;
+  justify-content: center;
+}
+
+.appLinks {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+  gap: 49px;
+}

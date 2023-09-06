@@ -1,3 +1,40 @@
 .root {
   position: relative;
+
+  .list {
+    min-width: 120px;
+  }
+}
+
+.flagIcon {
+  flex-shrink: 0;
+  width: 25px;
+  height: 13px;
+  box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.1);
+}
+
+.arrowIcon {
+  margin-top: -5px;
+}
+
+.toggle {
+  text-transform: uppercase;
+}
+
+.list {
+  border-radius: 18px;
+  border: 0.3px solid #236a3c;
+  background: #b8fcce;
+  box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.item {
+  color: #236a3c;
+  text-transform: uppercase;
+
+  &:hover {
+    background: #236a3c;
+    color: #fff;
+  }
 }

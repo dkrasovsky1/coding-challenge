@@ -1,0 +1,11 @@
+@import '@/styles/typography';
+
+.root {
+  @extend %nav-link;
+  color: #236a3c;
+  text-decoration: none;
+}
+
+.active {
+  color: #236a3c;
+}

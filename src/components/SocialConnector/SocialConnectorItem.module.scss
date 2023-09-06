@@ -1,0 +1,25 @@
+@import '@/styles/typography';
+
+.root {
+  display: flex;
+  align-items: center;
+  padding: 55px 20px 0;
+  gap: 25px;
+}
+
+.title {
+  @extend %caption1;
+  color: #fff;
+}
+
+.icon {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
+.link {
+  @extend %caption1;
+  color: #fff;
+  margin-left: auto;
+}

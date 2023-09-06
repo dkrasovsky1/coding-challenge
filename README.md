@@ -11,7 +11,9 @@ Application requirements:
   choice;
 - Add Metamask authorization process;
 - Add Instagram authorization process with ability to post a picture to stories. Use
-  these instagram credentials for testing: - Login: K**_y - Password: K_**4
+  these instagram credentials for testing:
+  - Login: K\*\*\_y
+  - Password: K\_\*\*4
 - Implement functionality for interactive elements:
   - Button “сделать фото” has to change displayed picture;
   - Check mark button has to post the picture to instagram stories;

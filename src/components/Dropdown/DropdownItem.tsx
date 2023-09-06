@@ -9,7 +9,8 @@ interface DropdownItemProps {
   href?: string;
   aligment?: 'center' | 'left';
   external?: boolean;
-  icon?: React.ReactElement;
+  leftIcon?: React.ReactElement;
+  rightIcon?: React.ReactElement;
   onClick?: () => void;
 }
 
@@ -19,17 +20,19 @@ export const DropdownItem: React.FC<DropdownItemProps> = ({
   aligment = 'center',
   onClick,
   href,
-  icon,
+  leftIcon,
+  rightIcon,
 }) => {
   const handleClick = () => {
     onClick?.();
   };
 
-  const classNames = clsx(styles.link, styles[aligment]);
+  const classNames = clsx(styles.btn, styles[aligment]);
   const content = (
     <>
-      {icon && React.cloneElement(icon, { className: styles.icon })}
+      {leftIcon && React.cloneElement(leftIcon, { className: styles.icon })}
       {children}
+      {rightIcon && React.cloneElement(rightIcon, { className: styles.icon })}
     </>
   );
 

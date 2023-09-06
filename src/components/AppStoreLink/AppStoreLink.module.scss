@@ -1,0 +1,37 @@
+@import '@/styles/typography';
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 175px;
+  border-radius: 18px;
+  border: 1px solid #236a3c;
+  background: #fff;
+  box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.1);
+  gap: 13px;
+  padding: 12px 15px;
+  color: #000;
+  text-decoration: none;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.icon {
+  display: block;
+  width: 31px;
+  height: 37px;
+  flex-shrink: 0;
+}
+
+.caption {
+  @extend %caption2;
+}
+
+.title {
+  @extend %body;
+}

@@ -1,3 +1,41 @@
 .root {
-  position: relative;
+  --btn-color: #236a3c;
+  --btn-bg-color: #b8fcce;
+  --btn-border-radius: 18px;
+  --btn-border-color: #236a3c;
+  --btn-border-width: 0.3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  color: var(--btn-color);
+  background: var(--btn-bg-color);
+  border-radius: var(--btn-border-radius);
+  border: var(--btn-border-width) solid var(--btn-border-color);
+}
+
+.medium {
+  height: 38px;
+  min-width: 104px;
+  gap: 10px;
+  padding: 0 12px;
+
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.primary {
+  --btn-color: #236a3c;
+  --btn-bg-color: #b8fcce;
+  --btn-border-radius: 18px;
+  box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.1);
+  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }

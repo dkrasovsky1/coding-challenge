@@ -1,0 +1,57 @@
+.root {
+  max-width: 319px;
+  padding: 15px;
+  display: grid;
+  grid-template-areas:
+    'photoCard actions'
+    'photoCard actions'
+    'colorPicker actions';
+}
+
+.photoCard {
+  width: 203px;
+}
+
+.colorPicker {
+  margin-top: 10px;
+  grid-area: colorPicker;
+}
+
+.actions {
+  margin-left: 16px;
+  grid-area: actions;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.takePhotoBtn {
+  margin-top: 14px;
+  color: #8cb45e;
+}
+
+.instaLink {
+  margin-top: 24px;
+}
+
+.publishBtn {
+  background-color: #8cb45e;
+  margin-top: auto;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+}
+
+.takePhotoBtn,
+.instaLink,
+.publishBtn {
+  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+}

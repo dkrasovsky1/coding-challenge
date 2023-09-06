@@ -1,0 +1,15 @@
+.root {
+  background-color: transparent;
+  border-width: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  display: block;
+  width: 100%;
+  max-width: 36px;
+  max-height: 36px;
+}

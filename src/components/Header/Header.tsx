@@ -1,9 +1,12 @@
 import React from 'react';
 import clsx from 'clsx';
 
+import { LangSwitcher } from '@/components/LangSwitcher';
+import { ConnectWallet } from '@/components/ConnectWallet';
+import { NavBar } from '@/components/NavBar';
+import { Container } from '@/components/Container';
+
 import styles from './Header.module.scss';
-import { LangSwitcher } from '../LangSwitcher';
-import { ConnectWallet } from '../ConnectWallet';
 
 interface HeaderProps {
   className?: string;
@@ -12,8 +15,11 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ className }) => {
   return (
     <header className={clsx(styles.root, className)}>
-      <LangSwitcher />
-      <ConnectWallet />
+      <Container className={styles.container}>
+        <NavBar className={styles.nav} />
+        <LangSwitcher className={styles.langSwitcher} />
+        <ConnectWallet className={styles.connectWallet} />
+      </Container>
     </header>
   );
 };
