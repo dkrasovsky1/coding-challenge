@@ -1,12 +1,12 @@
 import React from 'react';
 import clsx from 'clsx';
 import { AppStoreLink } from '@/components/AppStoreLink';
+import appConfig from '@/config/appConfig';
 
 import styles from './Footer.module.scss';
 
 import AppleStoreIcon from '@/assets/icons/apple.svg?inline';
 import GoogleStoreIcon from '@/assets/icons/google-play.svg?inline';
-import appConfig from '@/config/appConfig';
 
 interface FooterProps {
   className?: string;
@@ -18,7 +18,7 @@ export const Footer: React.FC<FooterProps> = ({ className }) => {
       <div className={styles.appLinks}>
         <AppStoreLink
           icon={<AppleStoreIcon />}
-          title="App Store"
+          title={'App Store'}
           href={appConfig.appStore.appleStore}
         />
         <AppStoreLink

@@ -1,8 +1,23 @@
+@import '@/styles/mixins/media';
+
 .root {
   position: relative;
 }
 
 .connectBtn {
-  width: 211px;
   text-transform: uppercase;
+
+  @include tablet-portrait {
+    width: 211px;
+  }
+}
+
+.connectBtnLabel {
+  @include mobile {
+    display: none;
+  }
+
+  @include tablet-portrait {
+    display: inline-block;
+  }
 }

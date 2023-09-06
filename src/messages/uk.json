@@ -1,9 +1,12 @@
 {
   "Navigation": {
-    "docs": "Documentation",
-    "more": "More"
+    "docs": "Документація",
+    "more": "Більше"
   },
-  "LangSwitcher": {
-    "locale": "{locale, select, uk {Український} en {Англійська} other {Невизначено}}"
+  "PhotoCard": {
+    "takePhoto": "Зроби цікаве фото"
+  },
+  "AppStore": {
+    "download": "Завантажити в"
   }
 }

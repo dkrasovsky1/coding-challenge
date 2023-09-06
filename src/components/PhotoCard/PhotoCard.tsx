@@ -1,6 +1,9 @@
+'use client';
+
 import React from 'react';
 import clsx from 'clsx';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import styles from './PhotoCard.module.scss';
 
@@ -19,6 +22,8 @@ export const PhotoCard: React.FC<PhotoCardProps> = ({
   code,
   qrCodeImage,
 }) => {
+  const t = useTranslations('PhotoCard');
+
   return (
     <div
       className={clsx(styles.root, className)}
@@ -32,7 +37,7 @@ export const PhotoCard: React.FC<PhotoCardProps> = ({
         height={223}
       />
       <div className={styles.footer}>
-        <span className={styles.caption}>Зроби цікаве фото</span>
+        <span className={styles.caption}>{t('takePhoto')}</span>
         <div className={styles.codeWrap}>
           <button className={styles.code} style={{ color }}>
             {code}

@@ -1,11 +1,20 @@
+@import '@/styles/mixins/media';
+
 .root {
   display: flex;
   justify-content: center;
+  padding-bottom: 30px;
 }
 
 .appLinks {
   display: flex;
   align-items: center;
   justify-self: start;
-  gap: 49px;
+  flex-direction: column;
+  gap: 20px;
+
+  @include tablet-portrait {
+    flex-direction: row;
+    gap: 49px;
+  }
 }

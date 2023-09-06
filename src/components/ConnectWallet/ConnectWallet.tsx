@@ -15,6 +15,7 @@ export const ConnectWallet: React.FC<ConnectWalletProps> = ({ className }) => {
     <div className={clsx(styles.root, className)}>
       <Button className={styles.connectBtn}>
         <MetamaskIcon />
+        <span className={styles.connectBtnLabel}>METAMASK</span>
       </Button>
     </div>
   );

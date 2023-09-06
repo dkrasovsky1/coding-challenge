@@ -1,5 +1,9 @@
+'use client';
+
 import React from 'react';
 import clsx from 'clsx';
+
+import { useTranslations } from 'next-intl';
 
 import styles from './AppStoreLink.module.scss';
 
@@ -16,6 +20,8 @@ export const AppStoreLink: React.FC<AppStoreLinkProps> = ({
   href,
   icon,
 }) => {
+  const t = useTranslations('AppStore');
+
   return (
     <a
       className={clsx(styles.root, className)}
@@ -25,7 +31,7 @@ export const AppStoreLink: React.FC<AppStoreLinkProps> = ({
     >
       {React.cloneElement(icon, { className: styles.icon })}
       <div className={styles.left}>
-        <span className={styles.caption}>Завантажити в</span>
+        <span className={styles.caption}>{t('download')}</span>
         <span className={styles.title}>{title}</span>
       </div>
     </a>

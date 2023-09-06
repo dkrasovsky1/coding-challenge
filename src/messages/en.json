@@ -3,7 +3,10 @@
     "docs": "Documentation",
     "more": "More"
   },
-  "LangSwitcher": {
-    "locale": "{locale, select, uk {Ukrainian} en {English} other {Unknown}}"
+  "PhotoCard": {
+    "takePhoto": "Take a photo"
+  },
+  "AppStore": {
+    "download": "Download on the"
   }
 }

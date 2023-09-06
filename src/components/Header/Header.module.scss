@@ -1,3 +1,5 @@
+@import '@/styles/mixins/media';
+
 .root {
   display: flex;
   padding: 30px 0;
@@ -6,8 +8,12 @@
 .container {
   display: flex;
   align-items: center;
-  gap: 55px;
+  gap: 20px;
   justify-content: flex-end;
+
+  @include tablet-portrait {
+    gap: 55px;
+  }
 }
 
 .langSwitcher {
@@ -16,4 +22,21 @@
 
 .connectWallet {
   position: relative;
+}
+
+.desktopNavBar {
+  display: none;
+
+  @include tablet-portrait {
+    display: flex;
+  }
+}
+
+.mobileMenu {
+  display: flex;
+  margin-left: auto;
+
+  @include tablet-portrait {
+    display: none;
+  }
 }

@@ -31,7 +31,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <button className={classNames} {...restProps}>
       {leftIcon && React.cloneElement(leftIcon, { className: styles.icon })}
-      <span className={styles.content}>{children}</span>
+      {children}
       {rightIcon && React.cloneElement(rightIcon, { className: styles.icon })}
     </button>
   );
