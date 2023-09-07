@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import appConfig from '@/config/appConfig';
 import { InstagramService } from '@/services/instagram';
 
-export async function GET(request: Request) {
+export async function POST(request: Request) {
   console.log('get request: ', request.url);
 
   const { searchParams } = new URL(request.url);

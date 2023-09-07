@@ -7,7 +7,9 @@ interface AppConfig {
     googlePlay: string;
     appleStore: string;
   };
+  host: string;
   walletConnectProjectId: string;
+  instagramRedirectUri: string;
   networkChainId: number;
   instagramClientId: string;
   instagramClientSecret: string;
@@ -22,9 +24,12 @@ const appConfig: AppConfig = {
     googlePlay: 'https://play.google.com',
     appleStore: 'https://www.apple.com',
   },
-  walletConnectProjectId: '363afc2d92992f000c29e4845068eecc',
+  host: process.env.NEXT_PUBLIC_HOST as string,
+  walletConnectProjectId: process.env
+    .NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID as string,
   networkChainId: 1,
-  instagramClientId: process.env.INSTAGRAM_CLIENT_ID as string,
+  instagramRedirectUri: '/api/auth/callback',
+  instagramClientId: process.env.NEXT_PUBLIC_INSTAGRAM_CLIENT_ID as string,
   instagramClientSecret: process.env.INSTAGRAM_CLIENT_SECRET as string,
 };
 
