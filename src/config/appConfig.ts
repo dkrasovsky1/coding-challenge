@@ -28,7 +28,7 @@ const appConfig: AppConfig = {
   walletConnectProjectId: process.env
     .NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID as string,
   networkChainId: 1,
-  instagramRedirectUri: '/api/auth/callback',
+  instagramRedirectUri: '/callback',
   instagramClientId: process.env.NEXT_PUBLIC_INSTAGRAM_CLIENT_ID as string,
   instagramClientSecret: process.env.INSTAGRAM_CLIENT_SECRET as string,
 };

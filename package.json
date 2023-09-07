@@ -35,6 +35,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.66.1",
+    "siwe": "^2.1.4",
     "stylelint": "^15.10.3",
     "stylelint-config-css-modules": "^4.3.0",
     "stylelint-config-prettier-scss": "^1.0.0",

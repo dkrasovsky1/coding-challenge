@@ -4,8 +4,8 @@ import React from 'react';
 import clsx from 'clsx';
 import { useConnect } from 'wagmi';
 import { useWeb3Modal } from '@web3modal/react';
-import { Button } from '@/components/Button';
 import appConfig from '@/config/appConfig';
+import { Button } from '@/components/Button';
 
 import styles from './ConnectWallet.module.scss';
 

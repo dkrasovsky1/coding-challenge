@@ -1,21 +1,17 @@
 import { NextResponse } from 'next/server';
-import appConfig from '@/config/appConfig';
-import { InstagramService } from '@/services/instagram';
+import { SiweMessage } from 'siwe';
 
 export async function POST(request: Request) {
-  console.log('get request: ', request.url);
+  const { message, signature } = await request.json();
+  const siweMessage = new SiweMessage(message);
 
-  const { searchParams } = new URL(request.url);
-  const instagramService = new InstagramService();
-  const code = searchParams.get('code');
+  try {
+    const response = await siweMessage.verify({ signature });
 
-  if (code) {
-    const accessToken = await instagramService.getAccessToken(code);
+    console.log('signature verified: ', response.data);
 
-    console.log('accessToken: ', accessToken);
-
-    return NextResponse.redirect(`${appConfig.host}/success`, 307);
-  } else {
-    return NextResponse.redirect(`${appConfig.host}/failure`, 307);
+    return NextResponse.json({ sussces: true });
+  } catch {
+    return NextResponse.json({ sussces: false });
   }
 }

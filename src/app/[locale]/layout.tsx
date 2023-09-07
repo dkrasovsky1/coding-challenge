@@ -3,9 +3,11 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { montserrat } from '@/fonts';
+import appConfig from '@/config/appConfig';
+
 import { MainLayout } from '@/components/MainLayout';
 import { WagmiProvider } from '@/providers/WagmiProvider';
-import appConfig from '@/config/appConfig';
+import { AuthContextProvider } from '@/providers/AuthProvider';
 
 export const metadata: Metadata = {
   title: 'Coding Callenge',
@@ -40,7 +42,9 @@ export default async function RootLayout({
       <NextIntlClientProvider locale={locale} messages={messages}>
         <body>
           <WagmiProvider>
-            <MainLayout>{children}</MainLayout>
+            <AuthContextProvider>
+              <MainLayout>{children}</MainLayout>
+            </AuthContextProvider>
           </WagmiProvider>
         </body>
       </NextIntlClientProvider>

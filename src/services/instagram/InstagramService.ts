@@ -11,7 +11,7 @@ export class InstagramService {
         client_id: appConfig.instagramClientId,
         client_secret: appConfig.instagramClientSecret,
         grant_type: 'authorization_code',
-        redirect_uri: `${appConfig.host}/api/auth/callback`,
+        redirect_uri: `${appConfig.host}${appConfig.instagramRedirectUri}`,
         code: code.replace('#_', ''),
       };
 
@@ -24,8 +24,10 @@ export class InstagramService {
       });
 
       if (!response.ok) {
+        const error = await response.json();
+
         throw new Error(
-          `Network response was not ok. Status: ${response.status} ${response.statusText}`,
+          `Error getting access token: code ${error.code} ${error.error_type} - ${error.error_message}`,
         );
       }
 
