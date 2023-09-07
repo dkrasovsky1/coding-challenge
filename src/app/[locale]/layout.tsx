@@ -3,7 +3,8 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { montserrat } from '@/fonts';
-import { MainLayout } from '@/components/MainLayout/MainLayout';
+import { MainLayout } from '@/components/MainLayout';
+import { WagmiProvider } from '@/providers/WagmiProvider';
 import appConfig from '@/config/appConfig';
 
 export const metadata: Metadata = {
@@ -38,7 +39,9 @@ export default async function RootLayout({
     <html lang={locale} className={montserrat.variable}>
       <NextIntlClientProvider locale={locale} messages={messages}>
         <body>
-          <MainLayout>{children}</MainLayout>
+          <WagmiProvider>
+            <MainLayout>{children}</MainLayout>
+          </WagmiProvider>
         </body>
       </NextIntlClientProvider>
     </html>

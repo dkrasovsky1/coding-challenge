@@ -15,12 +15,15 @@ interface SocialConnectorProps {
 export const SocialConnector: React.FC<SocialConnectorProps> = ({
   className,
 }) => {
+  // TODO: move to utils and use env variables
+  const authUrl = `https://api.instagram.com/oauth/authorize?client_id=816083850029682&redirect_uri=https://9d2b-46-33-39-37.ngrok-free.app/code&scope=user_profile,user_media,instagram_basic,instagram_content_publish&response_type=code`;
+
   return (
     <Card className={clsx(styles.root, className)}>
       <SocialConnectorItem
         className={styles.item}
         icon={<InstagramRoundedIcon />}
-        connectionLink="https://www.instagram.com/"
+        connectionLink={authUrl}
         title="Instagram"
       />
     </Card>

@@ -27,12 +27,12 @@ export const SocialConnectorItem: React.FC<SocialConnectorItemProps> = ({
       })}
       <span className={styles.title}>{title}</span>
       {!account && (
-        <a href={connectionLink} className={styles.link}>
+        <a href={connectionLink} className={styles.link} target="_blank">
           Connect
         </a>
       )}
       {account && (
-        <a href={accountLink} className={styles.link}>
+        <a href={accountLink} className={styles.link} target="_blank">
           {account}
         </a>
       )}
