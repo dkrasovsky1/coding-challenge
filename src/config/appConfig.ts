@@ -13,6 +13,8 @@ interface AppConfig {
   networkChainId: number;
   instagramClientId: string;
   instagramClientSecret: string;
+  jwtSecretKey: string;
+  jwtExpiresIn: number;
 }
 
 const appConfig: AppConfig = {
@@ -31,6 +33,8 @@ const appConfig: AppConfig = {
   instagramRedirectUri: '/callback',
   instagramClientId: process.env.NEXT_PUBLIC_INSTAGRAM_CLIENT_ID as string,
   instagramClientSecret: process.env.INSTAGRAM_CLIENT_SECRET as string,
+  jwtSecretKey: process.env.JWT_SECRET_KEY as string,
+  jwtExpiresIn: parseInt(process.env.JWT_EXPIRES_IN as string),
 };
 
 export default appConfig;

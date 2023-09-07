@@ -45,21 +45,8 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
   const { disconnect } = useDisconnect();
   const { address } = useAccount();
   const { chain } = useNetwork();
-
   const [isLoading, setIsLoading] = useState(true);
-
   const previousAddress = useRef(address);
-
-  const fetchCurrentUser = useCallback(async () => {
-    try {
-      setCurrentUser(null);
-    } catch (err) {
-      console.error(err);
-      setCurrentUser(null);
-    } finally {
-      setIsLoading(false);
-    }
-  }, [setCurrentUser]);
 
   const handleLogin = useCallback(async () => {
     try {
@@ -78,17 +65,15 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
 
       const signature = await signMessageAsync({ message });
 
-      const credentials = await authService.login(message, signature);
+      await authService.login(message, signature);
 
-      console.log(credentials);
-
-      await fetchCurrentUser();
+      setIsLoading(false);
     } catch (err) {
       disconnect();
       setCurrentUser(null);
       console.error(err);
     }
-  }, [address, chain?.id, disconnect, fetchCurrentUser, signMessageAsync]);
+  }, [address, chain?.id, disconnect, signMessageAsync]);
 
   const handleLogout = useCallback(async () => {
     setCurrentUser(null);
